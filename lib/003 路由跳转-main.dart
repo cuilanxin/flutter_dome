@@ -7,37 +7,7 @@ class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
-    return  MaterialApp(
-      title: 'Welcome to Flutter', 
-      theme: ThemeData(
-        // 1.亮度: light-dark
-        brightness: Brightness.light,
-        // 2.primarySwatch: primaryColor/accentColor的结合体
-        primarySwatch: Colors.red,
-        // 3.主要颜色: 导航/底部TabBar
-        primaryColor: Colors.red,
-        // 4.次要颜色: FloatingActionButton/按钮颜色
-        accentColor: Colors.orange,
-        // 5.卡片主题
-        cardTheme: CardTheme(
-          color: Colors.greenAccent,
-          elevation: 10,
-          shape: Border.all(width: 3, color: Colors.red),
-          margin: EdgeInsets.all(10)
-        ),
-        // 6.按钮主题
-        buttonTheme: ButtonThemeData(
-          minWidth: 0,
-          height: 25
-        ),
-        // 7.文本主题
-        textTheme: TextTheme(
-          // title: TextStyle(fontSize: 30, color: Colors.blue),
-          // display1: TextStyle(fontSize: 10),
-        )
-      ), // 程序的主题
-      home:const RandomWords()
-    );
+    return const MaterialApp(title: 'Welcome to Flutter', home: RandomWords());
   }
 }
 
