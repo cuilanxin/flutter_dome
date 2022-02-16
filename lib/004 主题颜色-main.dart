@@ -23,15 +23,15 @@ class MyApp extends StatelessWidget {
           color: Colors.greenAccent,
           elevation: 10,
           shape: Border.all(width: 3, color: Colors.red),
-          margin: EdgeInsets.all(10)
+          margin: const EdgeInsets.all(10)
         ),
         // 6.按钮主题
-        buttonTheme: ButtonThemeData(
+        buttonTheme: const ButtonThemeData(
           minWidth: 0,
           height: 25
         ),
         // 7.文本主题
-        textTheme: TextTheme(
+        textTheme: const TextTheme(
           // title: TextStyle(fontSize: 30, color: Colors.blue),
           // display1: TextStyle(fontSize: 10),
         )
