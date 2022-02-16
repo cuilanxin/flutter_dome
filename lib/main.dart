@@ -21,6 +21,31 @@ class RandomWordsState extends State<RandomWords> {
   final _suggestions = <WordPair>[];
   final _saved = Set<WordPair>();
   final _biggerFont = const TextStyle(fontSize: 18);
+  void _pushSaved() {
+    Navigator.of(context).push(
+      MaterialPageRoute(
+        builder: (context) {
+          final tiles = _saved.map((pair){
+            return ListTile(
+              title: Text(
+                pair.asPascalCase,
+                style: _biggerFont
+              ),
+            );
+          });
+            print('tiles: ${tiles}');
+          final divided = ListTile.divideTiles(tiles: tiles,context: context).toList();
+          print('divided: ${divided}');
+          return Scaffold(
+            appBar: AppBar(
+              title: const Text('Saved Suggestions'),
+            ),
+            body: ListView(children: divided),
+          );
+        }
+      )
+    );
+  }
   Widget _buildSuggestions() {
     return ListView.builder(
       padding: const EdgeInsets.all(16),
@@ -58,7 +83,13 @@ class RandomWordsState extends State<RandomWords> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(title: const Text('Startup Name Generator')),
-        body: _buildSuggestions());
+      appBar: AppBar(
+        title: const Text('Startup Name Generator'),
+        actions: <Widget>[ // 右上角的图标
+          IconButton(onPressed: _pushSaved, icon: const Icon(Icons.list))
+        ],
+      ),
+      body: _buildSuggestions()
+    );
   }
 }
