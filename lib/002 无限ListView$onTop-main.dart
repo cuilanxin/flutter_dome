@@ -14,10 +14,10 @@ class MyApp extends StatelessWidget {
 class RandomWords extends StatefulWidget {
   const RandomWords({Key? key}) : super(key: key);
   @override
-  createState() => RandomWordsState();
+  _RandomWordsState createState() => _RandomWordsState();
 }
 
-class RandomWordsState extends State<RandomWords> {
+class _RandomWordsState extends State<RandomWords> {
   final _suggestions = <WordPair>[]; // 数组
   final _saved = Set<WordPair>(); // set 类型对象 不能有重复的
   final _biggerFont = const TextStyle(fontSize: 18); // 样式

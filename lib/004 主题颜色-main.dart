@@ -44,10 +44,10 @@ class MyApp extends StatelessWidget {
 class RandomWords extends StatefulWidget {
   const RandomWords({Key? key}) : super(key: key);
   @override
-  createState() => RandomWordsState();
+  createState() => _RandomWordsState();
 }
 
-class RandomWordsState extends State<RandomWords> {
+class _RandomWordsState extends State<RandomWords> {
   final _suggestions = <WordPair>[];
   final _saved = Set<WordPair>();
   final _biggerFont = const TextStyle(fontSize: 18);
