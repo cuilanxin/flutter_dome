@@ -26,6 +26,10 @@ class HomeRoute extends StatelessWidget {
         child: TextButton(
           child: const Text('点击去新页面'),
           onPressed: (){
+            // Navigator.push(  这个方式也可以
+            //   context,
+            //   MaterialPageRoute(builder: (context){ return const NewRoute(); })
+            // );
             Navigator.of(context).push(
               MaterialPageRoute(builder: (context){ return const NewRoute(); })
             );
