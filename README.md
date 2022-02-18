@@ -22,3 +22,4 @@ $ flutter run
 
 - [Flutter 中文文档](https://flutter.cn/docs)
 - [dart Api 查阅地址](https://api.dart.cn/stable/2.16.1/index.html)
+- [Flutter 实战·第二版](https://book.flutterchina.club/chapter1/)
