@@ -16,6 +16,8 @@ $ flutter pub get
 $ flutter pub add english_words
 # 跑项目 本人 mac 打开 Simulator
 $ flutter run
+# 关闭调试
+$ flutter run --release
 ```
 
 # 学习参考
